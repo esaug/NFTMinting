@@ -44,7 +44,7 @@ module.exports = {
   contracts_build_directory: "./src/contracts/",
   compilers: {
     solc: {
-      version: "0.8.10",
+      version: "^0.8.0",
       optimizer: {
         enabled: true,
         runs: 200

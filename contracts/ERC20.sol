@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.7.0 < 0.9.0;
+pragma solidity >=0.4.0 <0.9.0;
 pragma experimental ABIEncoderV2;
 import "../node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol";
 
@@ -61,7 +61,7 @@ contract ERC20Basic is IERC20{
     }
 
 
-    function totalSupply() public override view returns (uint256){
+    function totalSupply() public view returns (uint256){
         return totalSupply_;
     }
 
@@ -70,15 +70,15 @@ contract ERC20Basic is IERC20{
         balances[msg.sender] += newTokensAmount;
     }
 
-    function balanceOf(address tokenOwner) public override view returns (uint256){
+    function balanceOf(address tokenOwner) public  view returns (uint256){
         return balances[tokenOwner];
     }
 
-    function allowance(address owner, address delegate) public override view returns (uint256){
+    function allowance(address owner, address delegate) public view returns (uint256){
         return allowed[owner][delegate];
     }
 
-    function transfer(address recipient, uint256 numTokens) public override returns (bool){
+    function transfer(address recipient, uint256 numTokens) public returns (bool){
         require(numTokens <= balances[msg.sender]);
         balances[msg.sender] = balances[msg.sender].sub(numTokens);
         balances[recipient] = balances[recipient].add(numTokens);
@@ -86,13 +86,13 @@ contract ERC20Basic is IERC20{
         return true;
     }
 
-    function approve(address delegate, uint256 numTokens) public override returns (bool){
+    function approve(address delegate, uint256 numTokens) public returns (bool){
         allowed[msg.sender][delegate] = numTokens;
         emit Approval(msg.sender, delegate, numTokens);
         return true;
     }
 
-    function transferFrom(address owner, address buyer, uint256 numTokens) public override returns (bool){
+    function transferFrom(address owner, address buyer, uint256 numTokens) public returns (bool){
         require(numTokens <= balances[owner]);
         require(numTokens <= allowed[owner][msg.sender]);
 

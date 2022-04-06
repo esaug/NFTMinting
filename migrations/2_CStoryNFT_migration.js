@@ -1,6 +1,6 @@
-const CStoryNFT = artifacts.require("CStoryNFT");
+const CStoryNFT = artifacts.require("CstoryNFT");
 
 module.exports = function (deployer) {
-  deployer.deploy(CStoryNFT, "CStoryNFT", "NFT");
+  deployer.deploy(CStoryNFT);
 };
 

@@ -2,29 +2,32 @@
 import { data } from "autoprefixer";
 import React from "react";
 
-function NftRender (props){
+function NftRender ({Nft}){
     
     return(
-        <div>
-               
-        <div>
-            <p>IMAGEN DEL NFT</p>
+        <div className='justify-center pt-2 bg-black'>
+        {Nft.rarity == 'Commond' ? (
+          <div>
+            <p>IMAGEN COMMOND DEL NFT</p>
             <img/>
-        </div>
-
-
+          </div>
+        ): Nft.rarity == 'Epic'?(
+          <div>
+            <p>IMAGEN EPIC DEL NFT</p>
+            <img/>
+          </div>
+        ): Nft.rarity == 'Legendary'?(
+          <div>
+            <p>IMAGEN LEGENDARY DEL NFT</p>
+            <img/>
+          </div>
+        ):("N0thing")}    
         <div >
           <br/>
-          <div>Name:{props.Nft.Name}</div>
-          <div>Str:{props.Nft.Str}</div>
-          <div>Dex:{props.Nft.Dex}</div>
-          <div>Luk:{props.Nft.Luk}</div>
-          <div>Int:{props.Nft.Int}</div>
-          <div>Mattk:{props.Nft.Mattk}</div>
-          <div>Wattk:{props.Nft.Wattk}</div>
-          <div>Type:{props.Nft.Type}</div>
-          <div>Class:{props.Nft.Class}</div>
-          <div>Rarity:{props.Nft.rarity}</div>
+          <p className='bg-black'>Name: {Nft.name}</p>
+          <p>Type: {Nft.tpe}</p>
+          <p>Class: {Nft.class}</p>
+          <p>Rarity: {Nft.rarity}</p>
           <br/>
         
         </div>

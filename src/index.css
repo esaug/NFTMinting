@@ -1,19 +1,407 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav {
+    
+  font-family: 'Signika', sans-serif;
+  text-align: center;
+  align-items: center;
+  display: inline;
+  border-radius: 7px;
+  background-color: #2157c5;
+  padding: 10px 150px;
+  text-shadow: 2px 1px 0 #012a57, -1px -1px 0 #012a57, 1px -1px 0 #012a57, -1px 1px 0 #012a57, 1px 1px 0 #012a57;
+  border-bottom: 2px;
+  border-color: #04406b;
+  box-shadow: 0 0 0 1px #012a57, 0 2px 0 #012a57;
+  display: inline-block;
+  
+
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: inline-block;
+
+}
+
+.nav li {
+  
+  
+  list-style-type: none;
+  padding: 10px 15px;
+  display: inline;
+  border-bottom: 5px;
+  border-color: red;
+
 }
 
 a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-family: 'Fredoka One', cursive;
 
-  margin-right: 1rem;
-} 
+  border-color: white;
+  
+ 
+}
 
+.active {
+  border-bottom: 3px solid white;
+  
+  
+  
+}
+
+.navbar-end {
+  align-items: flex-end;
+  display: inline;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.btn-lg {
+  padding: 10px 50px;
+  font-family: 'Fredoka One', cursive;
+  cursor: pointer;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  display: inline-block;
+  background: linear-gradient(180deg,#ffdb31 54.17%,rgba(249,181,27,1) 54.18%),#ffdb31!important;
+
+  box-shadow: 0 0 0 1px #012a57, 0 2px 0 #012a57;
+  border-radius: 7px;
+  text-shadow: 0px 2px 0 #2c2c2c, -1px -1px 0 #2c2c2c, 1px -1px 0 #2c2c2c, -1px 1px 0 #2c2c2c, 1px 1px 0 #2c2c2c;
+
+}
+
+.fredoka {
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 2px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+.address {
+    padding: 0px 0px;
+    background-color: #132456;
+   
+    border-radius: 7px;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 1px 0 #012a57, -1px -1px 0 #012a57, 1px -1px 0 #012a57, -1px 1px 0 #012a57, 1px 1px 0 #012a57;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.title-address {
+  background-color: #2157c5;
+  border-radius: 7px 0px 0px 7px;
+  color: white;
+}
+
+.copy-address {
+  background-color: white;
+  border-radius: 0px 7px 7px 0px;
+  padding: 10px ;
+
+}
+
+
+.card {
+  padding: 0px 0px 5px 0px;
+  
+  box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid #012a57;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 10px;
+  align-items: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  text-shadow: 2px 1px 0 #012a57, -1px -1px 0 #012a57, 1px -1px 0 #012a57, -1px 1px 0 #012a57, 1px 1px 0 #012a57;
+  text-align: center;
+
+}
+
+.reflect {
+  padding: 7px 70px;
+  display: inline;
+
+
+  
+  display: inline-block;
+  border-radius: 10px;  
+
+}
+
+.card:active {
+  padding: 0px 0px 0px 0px;
+  margin-top: 14px;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+.bg-green-button {
+  background-color: #50d502;
+}
+
+
+.separator {
+  height: 0.2em;
+  width: 80%;
+  display: inline-block;
+  background-color: #fbbb1f;
+  
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px #fbbb1f, 0 6px 20px 0 #fbbb1f;
+}
+
+
+
+.information {
+  height: 300px;
+  width: 100%;
+  background-color: #0a2a6a;
+  box-shadow: 0 0 0 1px #007aff, 0 1px 0 #007aff;
+  border-radius: 15px;
+  display: inline-block;
+  
+  
+}
+
+.information img {
+  width: 80%;
+  display: inline-block;
+  
+}
+
+.information-p {
+      color: white;
+      font-family: 'Fredoka One', cursive;
+      text-shadow: 2px 1px 0 #012a57, -1px -1px 0 #012a57, 1px -1px 0 #012a57, -1px 1px 0 #012a57, 1px 1px 0 #012a57;
+      background-repeat: repeat;
+      font-size: 1.3em;
+      
+}
+
+/* Container and grid*/
+
+.containers {
+  display: flex;
+  padding: 0;
+
+}
+
+.col-15 {
+  width: 15%;
+  height: auto;
+  
+}
+
+.col-20 {
+  width: 20%;
+  height: auto;
+}
+
+.col-25 {
+  width: 25%;
+  height: auto;
+}
+
+.col-30 {
+  width: 30%;
+  height: auto;
+}
+
+.col-50 {
+  width: 50%;
+  height: auto;
+}
+
+.col-70 {
+  width: 70%;
+  height: auto;
+}
+
+.col-100 {
+  width: 100%;
+  height: auto;
+}
+
+/* Titles */
+
+.bg-image-1 {
+      color: white;
+      font-family: 'Fredoka One', cursive;
+      text-shadow: 2px 1px 0 #012a57, -1px -1px 0 #012a57, 1px -1px 0 #012a57, -1px 1px 0 #012a57, 1px 1px 0 #012a57;
+      background-repeat: repeat;
+      font-size: 3em;
+     
+      border: 1px solid #007aff;
+      border-top: 0px;
+      border-right: 0px;
+      border-left: 0px;
+ 
+
+}
+
+
+
+.nft {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  border-radius: 7px;
+  box-shadow: 0 0 0 1px #012a57, 0 3px 0 #012a57;
+}
+
+.nft img {
+  display: inline-block;
+}
+
+.top { 
+  display: inline-block;
+ 
+  width: 100%;
+  height: auto;
+  border-radius: 7px 7px 0px 0px;
+  margin: 0;
+  padding: 0;
+}
+
+.down {
+  display: inline-block;
+
+  width: 100%;
+  height: 2.6em;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  border-radius: 0px 0px 7px 7px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  text-shadow: 2px 1px 0 #012a57, -1px -1px 0 #012a57, 1px -1px 0 #012a57, -1px 1px 0 #012a57, 1px 1px 0 #012a57;
+  color: white;
+
+
+}
+
+.down .effect {
+  width: 100%;
+  display: inline-block;
+  border-radius: 0px 0px 7px 7px;
+  
+}
+
+.down p{
+  padding: 0.47em;
+}
+
+
+.g-gray {
+  background: rgb(208,208,208);
+  background: radial-gradient(circle, rgba(208,208,208,1) 0%, rgba(131,131,131,1) 100%);
+}
+
+.g-sky-light {
+  background: rgb(183,226,240);
+  background: radial-gradient(circle, rgba(183,226,240,1) 0%, rgba(0,194,255,1) 100%);
+}
+
+.g-orange {
+  background: rgb(233,184,40);
+  background: radial-gradient(circle, rgba(233,184,40,1) 0%, rgba(254,49,50,1) 100%);
+}
+
+.g-weird {
+  background: rgb(177,115,140);
+background: radial-gradient(circle, rgba(177,115,140,1) 0%, rgba(157,23,77,1) 100%);
+
+}
+
+.g-yellow {
+  background: rgb(255,220,58);
+  background: radial-gradient(circle, rgba(255,220,58,1) 0%, rgba(255,176,0,1) 100%);
+}
+
+.g-purple {
+  background: rgb(162,85,238);
+background: radial-gradient(circle, rgba(162,85,238,1) 0%, rgba(94,0,189,1) 100%);
+}
+
+.g-green {
+  background: rgb(102,221,182);
+background: radial-gradient(circle, rgba(102,221,182,1) 0%, rgba(0,159,108,1) 100%);
+}
+
+.g-pink {
+  background: rgb(245,60,130);
+  background: radial-gradient(circle, rgba(245,60,130,1) 0%, rgba(172,1,65,1) 100%);
+}
+
+.g-bone {
+  background: rgb(222,216,206);
+background: radial-gradient(circle, rgba(222,216,206,1) 0%, rgba(158,146,124,1) 100%);
+}
+
+.bg-bone-500 { 
+  background-color: #afa38f;
+}
+
+.bg-bone-400 {
+  background-color: #756f66;
+}
+
+.bg-gold-500 {
+  background-color: #c1932c;
+}
+
+.bg-gold-400 {
+  background-color: #d0ac5a;
+}
+
+.g-gold {
+  background: rgb(213,191,141);
+background: radial-gradient(circle, rgba(213,191,141,1) 0%, rgba(196,156,66,1) 100%);
+}
+
+.sub-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3em;
+  
+  color: white;
+
+}
+
+.text-shadow-purple {
+  text-shadow: 2px 1px 0 #012a57, -1px -1px 0 #012a57, 1px -1px 0 #012a57, -1px 1px 0 #012a57, 1px 1px 0 #012a57;
+}
+
+.text-shadow-yellow {
+  text-shadow: 2px 1px 0 #012a57, -1px -1px 0 #012a57, 1px -1px 0 #012a57, -1px 1px 0 #012a57, 1px 1px 0 #012a57;
+}
+
+.footers {
+  height: auto;
+  
+}
+
+.border-t-blue {
+  border: 1px 0px 0px 0px;
+  border-top: 1px solid #007aff;
+}
+
+.mascot {
+  width: 20%;
+}
